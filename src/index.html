@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+
+    <!-- main screen start -->
+    <section class="main polygon-section-down">
+        <div class="border-line">
+            <img src="./ico/logo-coj-mini.png" alt="#" class="main-logo">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <nav role="navigation"
+                            class="d-flex d-md-block justify-content-end navigation">
+                            <div id="menuToggle">
+                                <input type="checkbox" class="menu__checkbox" />
+                                <div class="menu__toggler"></div>
+                                <div class="menu__toggler"></div>
+                                <div class="menu__toggler"></div>
+                                <ul
+                                    class="menu d-flex flex-column flex-md-row justify-content-md-around">
+                                    <li class="nav-item"><a href="#" class="menu__link">Головна</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#" class="menu__link">Про Нас</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#" class="menu__link">Режими</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#" class="menu__link">Зброя</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#" class="menu__link">Галерея</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#" class="menu__link">Ціни</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#" class="menu__link">Контакти</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center justify-content-xl-start">
+                    <div class="logo__wrapper ">
+                        <img src="./img/logo-coj.png" alt="#" class="logo-coj">
+                        <p class="main__desc">Копіпаста (англ. copypasta від copy - скопіювати,
+                            paste - вставити) - повторно запощена, або перепощена звідкілясь
+                            інформація. Найпоширеніший засіб
+                        </p>
+                        <div class="main__btn-wrapper text-center">
+                            <button class="main__btn">Зв’язатися</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="./img/main-bg.png" alt="#" class="main-bg d-none d-md-block">
+            <img src="./img/main-screen-boy.png" alt="#" class="main-bg-boy">
+    </section>
+    <!-- main screen finish -->
+
+    <!-- about us start -->
+    <section class="about-us" id="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="header-label">
+                        <h2>Про нас</h2>
+                    </div>
+                    <img src="./img/about.png" class="about-us img-fluid" alt="img">
+                    <p class="about-desc">Копіпаста (англ. copypasta від copy - скопіювати, paste -
+                        вставити) - повторно запощена, або перепощена звідкілясь інформація.
+                        Найпоширеніший засіб спілкування про щось розумне людей, які в цьому
+                        розумному не розбираються. Цінності немає ніякої, окрім виключно мистецької,
+                        оскільки, якщо її заїздили, значить вона не.</p>
+                </div>
+            </div>
+        </div>
+        <img src="./img/about-bg.png" alt="bg" class="about-us__bg">
+    </section>
+    <!-- about us finish -->
+
+    <!-- game modes start -->
+    <section id="mods" class="polygon-section-up mods">
+        <div class="mods__bg d-none d-md-block">
+            <img src="img/game-modes-bg.png">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2
+                        class="section__header d-flex justify-content-center justify-content-lg-start">
+                        Режими гри</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 d-flex align-items-center">
+                    <img class="mods__pic d-none d-lg-block" src="img/game-mods.png">
+                </div>
+                <div class="col-6 col-lg-3 text-center">
+                    <div class="game-mode">
+                        <img class="game-mode__ico" src="ico/group.png">
+                        <h3 class="game-mode__title">Командний</h3>
+                        <p class="game-mode__text">Командний забіг 4х4</p>
+                    </div>
+                    <div class="game-mode">
+                        <img class="game-mode__ico" src="ico/flag.png">
+                        <h3 class="game-mode__title">Захоплення прапору</h3>
+                        <p class="game-mode__text">Командний забіг 4х4</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 text-center">
+                    <div class="game-mode">
+                        <img class="game-mode__ico" src="ico/story.png">
+                        <h3 class="game-mode__title">Сюжетний</h3>
+                        <p class="game-mode__text">Сюжетний режим гри</p>
+                    </div>
+                    <div class="game-mode">
+                        <img class="game-mode__ico" src="ico/king-of-the-hill.png">
+                        <h3 class="game-mode__title">Королівська битва</h3>
+                        <p class="game-mode__text">Забіг кожен сам за себе</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- game modes finish -->
+
+    <!-- guns catalogue start -->
+    <section class="guns-catalogue" id="guns-catalogue">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-center justify-content-lg-end">
+                    <div class="section-header d-flex justify-content-center align-items-center">
+                        <h2>Каталог зброї</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-4 d-none d-lg-block">
+                    <div class="catalog">
+                        <div class="catalog__row d-flex justify-content-between">
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img-1.png" alt="img-1"
+                                        class="nerf-gun-thumbnail"
+                                        data-catalog-item-title="Megaladon"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img-1.png">
+                                </div>
+                            </div>
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img.png" alt="img-2"
+                                        class="nerf-gun-thumbnail"
+                                        data-catalog-item-title="Megaladon"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img.png">
+                                </div>
+                            </div>
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img-3.png" alt="img3"
+                                        class="nerf-gun-thumbnail"
+                                        data-catalog-item-title="Megaladon"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img-3.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__row d-flex justify-content-between">
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img-4.png" alt="img4"
+                                        class="nerf-gun-thumbnail" data-catalog-item-title="Rival"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img-4.png">
+                                </div>
+                            </div>
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img-5.png" alt="img5"
+                                        class="nerf-gun-thumbnail"
+                                        data-catalog-item-title="Megaladon"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img-5.png">
+                                </div>
+                            </div>
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img-6.png" alt="img6"
+                                        class="nerf-gun-thumbnail"
+                                        data-catalog-item-title="Megaladon"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img-6.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__row d-flex justify-content-between">
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img-7.png" alt="img7"
+                                        class="nerf-gun-thumbnail"
+                                        data-catalog-item-title="Megaladon"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img-7.png">
+                                </div>
+                            </div>
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img-8.png" alt="img8"
+                                        class="nerf-gun-thumbnail"
+                                        data-catalog-item-title="Megaladon"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img-8.png">
+                                </div>
+                            </div>
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img-9.png" alt="img9"
+                                        class="nerf-gun-thumbnail"
+                                        data-catalog-item-title="Megaladon"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img-9.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 d-flex justify-content-center">
+                    <div>
+                        <div class="catalog-item__img" id="catalogItemImgContainer">
+                            <img src="./img/gun-img-1.png" class="nerf-gun-lg" id="catalogItemImg">
+                        </div>
+                        <div class="catalog-item__info text-center">
+                            <h3 class="catalog-item__title" id="catalogItemTitle">Megalodon</h3>
+                            <p class="catalog-item__desc" id="catalogItemDesc">
+                                скопіювати - повторно запощена, або перепощена звідкілясь
+                                інформація.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 d-none d-lg-block">
+                    <div class="catalog">
+                        <div class="catalog__row d-flex justify-content-between">
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img-10.png" alt="img-1"
+                                        class="nerf-gun-thumbnail"
+                                        data-catalog-item-title="Megaladon"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img-10.png">
+                                </div>
+                            </div>
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img-11.png" alt="img-2"
+                                        class="nerf-gun-thumbnail"
+                                        data-catalog-item-title="Megaladon"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img-11.png">
+                                </div>
+                            </div>
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img-12.png" alt="img3"
+                                        class="nerf-gun-thumbnail"
+                                        data-catalog-item-title="Megaladon"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img-12.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__row d-flex justify-content-between">
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img-13.png" alt="img4"
+                                        class="nerf-gun-thumbnail"
+                                        data-catalog-item-title="Megaladon"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img-13.png">
+                                </div>
+                            </div>
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img-14.png" alt="img5"
+                                        class="nerf-gun-thumbnail"
+                                        data-catalog-item-title="Megaladon"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img-14.png">
+                                </div>
+                            </div>
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img-15.png" alt="img6"
+                                        class="nerf-gun-thumbnail"
+                                        data-catalog-item-title="Megaladon"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img-15.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__row d-flex justify-content-between">
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img-16.png" alt="img7"
+                                        class="nerf-gun-thumbnail"
+                                        data-catalog-item-title="Megaladon"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img-16.png">
+                                </div>
+                            </div>
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img-17.png" alt="img8"
+                                        class="nerf-gun-thumbnail"
+                                        data-catalog-item-title="Megaladon"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img-17.png">
+                                </div>
+                            </div>
+                            <div class="catalog-item">
+                                <div
+                                    class="catalog-item__preview d-flex justify-content-center align-items-center">
+                                    <img src="./img/gun-img.png" alt="img9"
+                                        class="nerf-gun-thumbnail"
+                                        data-catalog-item-title="Megaladon"
+                                        data-catalog-item-desc="скопіювати - повторно запощена, або перепощена звідкілясь інформація."
+                                        data-catalog-item-img="./img/gun-img.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row catalog">
+                <div class="col-3 col-sm-2 d-flex d-lg-none align-items-center justify-content-end">
+                    <div class="slider-prev"></div>
+
+                </div>
+                <div class="col-6 col-sm-8 d-lg-none mx-auto">
+                    <div class="swiper-container" id="catalog-mobile">
+                        <div class="swiper-wrapper">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-sm-2 d-flex d-lg-none align-items-center ">
+                    <div class="slider-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- guns catalogue finish -->
+
+    <!-- gallery start -->
+    <section class="gallery" id="gallery">
+        <div class="gallery-bg d-none d-md-block"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 d-flex justify-content-center">
+                    <h2>Галерея</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="image-gallery">
+                        <img src="./img/galery-img-1.png" class="gallery-img-1 img-fluid" alt="">
+                        <img src="./img/galery-img-2.png" class="gallery-img-2 img-fluid" alt="">
+                        <img src="./img/galery-im-3.png" class="gallery-img-3 img-fluid" alt="">
+                        <img src="./img/galery-img-4.png" class="gallery-img-4 img-fluid" alt="">
+                        <img src="./img/gallery-img.png" class="gallery-img-5 img-fluid" alt="">
+                        <img src="./img/galery-img-6.png"
+                            class="gallery-img-6 img-fluid d-none d-md-block" alt="">
+                        <img src="./img/galery-img-7.png" class="gallery-img-7 img-fluid" alt="">
+                        <img src="./img/galery-img-8.png" class="gallery-img-8 img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- gallery finish -->
+
+    <!-- price list start -->
+    <section class="prices" id="prices">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <div class="prices__title d-flex justify-content-center align-items-center">
+                            <h2>Ціни</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-4 d-flex justify-content-center">
+                    <div class="card">
+                        <div
+                            class="card__info card__info-one d-flex flex-column align-items-center justify-content-center">
+                            <h3 class="card__title">Індивідуальна гра</h3>
+                            <p class="card__desc">• Механічний бластер</p>
+                            <p class="card__desc">• 30 хвилин / 2 раунди</p>
+                            <p class="card__desc">• 1 людина</p>
+                            <p class="card__desc-sm">Вас додадуть до команди яка вже
+                                змагається у матчі.</p>
+                            <h2 class="card__price">150 грн</h2>
+                        </div>
+                        <a href="#" class="card__cta d-flex justify-content-center"><button>
+                                <h3>Замовити</h3>
+                            </button></a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card d-flex align-items-center">
+                        <div
+                            class="card__info card__info-two d-flex flex-column align-items-center justify-content-center">
+                            <h3 class="card__title">Груповий забіг</h3>
+                            <p class="card__desc">• Механічний бластер</p>
+                            <p class="card__desc">• 1 година / 4 раунди</p>
+                            <p class="card__desc">• До 10 осіб</p>
+                            <p class="card__desc-sm">Вас додадуть до команди яка вже
+                                змагається у матчі.</p>
+                            <h2 class="card__price">1200 грн</h2>
+                        </div>
+                        <a href="#" class="card__cta d-flex justify-content-center"><button>
+                                <h3>Замовити</h3>
+                            </button></a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card d-flex align-items-center">
+                        <div
+                            class="card__info card__info-three d-flex flex-column align-items-center justify-content-center">
+                            <h3 class="card__title">Груповий забіг+</h3>
+                            <p class="card__desc">• Механічний бластер</p>
+                            <p class="card__desc">• 2 години / 8 раундів</p>
+                            <p class="card__desc">• До 10 осіб</p>
+                            <p class="card__desc-sm">Вас додадуть до команди яка вже
+                                змагається у матчі.</p>
+                            <h2 class="card__price">2000 грн</h2>
+                            <p class="card__discount">Заощаджуйте 400 грн!</p>
+                        </div>
+                        <a href="#" class="card__cta d-flex justify-content-center"><button>
+                                <h3>Замовити</h3>
+                            </button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- price list finish -->
+
+    <!-- contact us start  -->
+    <section class="contact polygon-section-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center text-lg-left">
+                    <h2 class="contact__title">Зворотній зв’язок</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-6 mx-auto">
+                    <div class="form-wrapper">
+                        <form action="#">
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <input type="text" class="form-item form-control"
+                                        placeholder="Ім’я">
+                                </div>
+                                <div class="form-group col-6">
+                                    <input type="tel" class="form-item form-control"
+                                        placeholder="Номер телефону">
+                                </div>
+                                <div class="form-group col-12">
+                                    <textarea class="form-item-lg form-control" cols="10" rows="5"
+                                        placeholder="Повідомлення"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-btn__wrapper text-center">
+                                <button class="form-btn">Зв’язатися</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 contact__item-wrapper">
+                <div class="col contact__item-wrapper">
+                    <div class="contact__item text-center">
+                        <img src="./ico/smartphone.png" alt="#">
+                        <p class="contact__item-text">Подзвоніть нам:</p>
+                        <p class="contact__item-desc">+38 (093) 060 47 48</p>
+                    </div>
+                </div>
+                <div class="col contact__item-wrapper">
+                    <div class="contact__item text-center">
+                        <img src="./ico/message.png" alt="#">
+                        <p class="contact__item-text">Напишіть нам:</p>
+                        <p class="contact__item-desc">Viber/Telegram</p>
+                    </div>
+                </div>
+                <div class="col contact__item-wrapper">
+                    <div class="contact__item text-center">
+                        <img src="./ico/watch.png" alt="#">
+                        <p class="contact__item-text">Будемо раді Вам:</p>
+                        <p class="contact__item-desc">Щодня з 10:00 до 20:00</p>
+                    </div>
+                </div>
+                <div class="col contact__item-wrapper">
+                    <div class="contact__item text-center">
+                        <img src="./ico/location.png" alt="#">
+                        <p class="contact__item-text">Завітайте до нас:</p>
+                        <p class="contact__item-desc">Київ, Велика Васильківська</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/contact-bg.png" alt="#" class="contact-bg d-none d-md-block">
+    </section>
+    <!-- contact us start -->
+
+    <!-- map + footer start -->
+    <section id="footer" class="footer">
+        <iframe width="100%" height="100%" class="map"
+            src="https://maps.google.com/maps?q=%D0%B0%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%BC%D1%96%D1%81%D1%82%D0%B5%D1%87%D0%BA%D0%BE&t=&z=17&ie=UTF8&iwloc=&output=embed"
+            frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+        <div class="container">
+            <div class="row footer__wrap">
+                <div
+                    class="col-6 col-md-4 d-flex align-items-center justify-content-center order-2 order-md-1">
+                    <img src="ico/logo-footer.png" alt="Logo" class="footer__logo">
+                </div>
+                <div
+                    class="footer__social col-12 col-md-4 d-flex justify-content-around align-items-center order-1 order-md-2">
+                    <a href="#">
+                        <img src="ico/insta.png" alt="instagram" class="social-media-icons">
+                    </a>
+                    <a href="#" class="social-media-icons d-flex justify-content-center">
+                        <img src="ico/facebook.png" alt="facebook">
+                    </a>
+                    <a href="#">
+                        <img src="ico/telegram.png" alt="telegram" class="social-media-icons">
+                    </a>
+                    <a href="#" class="social-media-icons d-flex justify-content-center">
+                        <img src="ico/viber.png" alt="viber">
+                    </a>
+                </div>
+                <div
+                    class="col-6 col-md-4 d-flex align-items-center text-center justify-content-center order-3 order-md-3">
+                    <p class="footer__text">Made by SJE company All rights Protected 2020</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- map + footer finish -->
+</body>
+
+</html>

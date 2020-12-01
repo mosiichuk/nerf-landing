@@ -1,0 +1,623 @@
+@import "./mixins/reset"
+@import "./mixins/breakpoints"
+@import "./mixins/reset"
+@import "./mixins/util"
+@import "./css/fonts"
+
+@import "~swiper/swiper.scss";
+
+$baseSize: 16px
+$baseSizeMd: 15px
+$baseSizeLg: 20px
+
+//Colors
+
+$accent-orange: #FFA314
+$accent-blue: #3F73E1
+$bg-blue: linear-gradient(180deg, #1A237E 0%, rgba(77, 126, 229, 0) 100%), #1A237E
+$bg-orange: linear-gradient(180deg, rgba(255, 172, 10, 0.85) 22.4%, #FF7A00 79.17%), #FF7A00
+$text-black: #2F2F2F
+$text-grey: #AAAAAA
+$text-white: #F9F8F3
+$hover-accent: #FF7A00
+$hover: #EFE4AD
+
+//Font sizes
+
+h1
+    color: $text-white
+    font-size: 64px
+    font-family: Montserrat
+    line-height: 100%
+    font-weight: bold
+
+h2
+    color: $text-white
+    font-weight: bold
+    font-size: 48px
+    line-height: 45px
+
+h3
+    color: $text-white
+    font-size: 28px
+    line-height: 26px
+
+//Common
+
+html
+    font-size: $baseSize
+
+body
+    font-family: Roboto
+    line-height: 16px
+    color: $text-white
+
+input.form-control
+    +reset-input-style
+
+button
+    +reset-button-style
+
+a
+    +reset-link-style
+
+// <!-- main screen start -->
+.navigation
+    padding: 19px 0px 16px
+
+.menu
+    letter-spacing: 4px
+    text-transform: uppercase
+    position: relative
+    width: 100%
+
+    +screen-down(md)
+        color: $text-white
+        position: absolute
+        width: 300px
+        margin: -100px 0 0 -100px
+        padding: 150px 50px 50px 50px
+        background: $accent-orange
+        -webkit-font-smoothing: antialiased
+        z-index: 1
+        transform-origin: 0% 0%
+        transform: translate(100%, 0)
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0)
+        border: 1px solid $text-white
+        border-radius: 5px
+
+    +screen-down(sm)
+        margin: -100px 0 0 -150px
+
+    &__toggler
+        width: 32px
+        height: 4px
+        margin-bottom: 5px
+        background-color: $text-white
+        border-radius: 3px
+        position: relative
+        z-index: 2
+        transform-origin: 4px 0px
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease
+        display: none
+
+        +screen-down(md)
+            display: block
+
+    &__link
+
+        +screen-down(lg)
+            +fs(14px)
+
+        &:hover,&:active
+            color: $hover
+
+.nav-item
+    +screen-down(md)
+        margin-bottom: 10px
+
+#menuToggle
+    position: relative
+
+    & input
+        display: block
+        width: 42px
+        height: 32px
+        position: absolute
+        top: -5px
+        left: -5px
+        cursor: pointer
+        opacity: 0
+        z-index: 3
+        -webkit-touch-callout: none
+
+        +screen-up(md)
+            display: none
+
+        &:checked ~ .menu__toggler
+            opacity: 1
+            transform: rotate(45deg) translate(3px, 0px)
+            background: #232323
+
+        &:checked ~ .menu__toggler:nth-last-child(3)
+            opacity: 0
+            transform: rotate(0deg) scale(0.2, 0.2)
+
+        &:checked ~ .menu__toggler:nth-last-child(2)
+            transform: rotate(-45deg) translate(-1px, 0px)
+
+        &:checked ~ .menu
+            transform: none
+
+.main
+    position: relative
+    height: 90vh
+    background: $bg-orange
+    overflow: hidden
+
+    &__desc
+        width: 100%
+        max-width: 370px
+        text-align: justify
+        margin-top: 39px
+
+    &__btn
+        width: 100%
+        max-width: 264px
+        height: 80px
+        border: 4px solid $text-white
+        box-sizing: border-box
+        border-radius: 20px
+        font-weight: 500
+        +fs(28px)
+        text-transform: uppercase
+
+        &-wrapper
+            margin-top: 45px
+
+        &:hover
+            border: 4px solid $hover
+            transition: all 0.5s ease
+            box-shadow: -1px 0px 20px -3px rgba(0,0,0,0.10)
+
+
+    &-bg
+        position: absolute
+        right: 0
+        top: 0
+        z-index: -1
+
+        &-boy
+            position: absolute
+            right: 0
+            bottom: 0
+            width: 50%
+
+            +screen-down(xl)
+                display: none!important
+
+
+    &-logo
+        position: absolute
+        bottom: -25px
+        left: 2%
+
+.logo__wrapper
+    margin-top: 4%
+
+.border-line
+    border-bottom: 1px solid $text-white
+    position: relative
+
+.polygon-section-down
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 120px))
+
+    +screen-down(md)
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+
+// <!-- main screen finish -->
+
+// <!-- about us start -->
+.about-us
+    padding-top: 35px
+    padding-bottom: 16px
+    position: relative
+    &__bg
+        position: absolute
+        width: 100%
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: -1
+
+.header-label
+    background-color: $accent-orange
+    width:  346px
+    margin: 0 auto
+    padding-bottom: 8px
+
+.about-desc
+    color: $text-black
+    max-width: 620px
+    text-align: justify
+    margin: 0 auto
+
+// <!-- about us finish -->
+
+// <!-- game modes start -->
+.polygon-section-up
+    clip-path: polygon(0 0, 100% 120px, 100% 100%, 0% 100%)
+    padding-top: 120px
+
+    +screen-down(lg)
+        clip-path: none
+
+.section__header
+    margin-bottom: 60px
+
+.mods
+    position: relative
+    background: $bg-blue
+    padding-bottom: 60px
+
+    &__bg
+        position: absolute
+        top: 30px
+        left: -4%
+
+    &__pic
+        width: 100%
+        margin: 0 auto
+
+.game-mode
+    margin-bottom: 40px
+
+    &__ico
+        margin-bottom: 15px
+
+    &__title
+        margin: 0 auto
+        max-width: 200px
+        margin-bottom: 20px
+
+    &__text
+        margin: 0 auto
+        max-width: 150px
+        color: $text-white
+
+    &:last-child
+        margin-bottom: 0px
+
+// <!-- game modes finish -->
+
+// <!-- guns catalogue start -->
+.catalog
+    margin-top: 35px
+
+    &__row
+        margin-bottom: 64px
+
+        &:last-child
+            margin-bottom: 0px
+
+    &-item
+        +screen-down(lg)
+        display: flex
+        justify-content: center
+
+        &__preview
+            width: 61px
+            height: 61px
+            border: 3px solid $accent-orange
+            border-radius: 8px
+
+        &:hover
+            +screen-up(lg)
+                transform: scale(2)
+                transition: 0.5s all ease
+
+        &:hover .catalog-item__preview
+            border: 3px solid $accent-blue
+            transition: 0.5s all ease
+
+        &__img
+            margin-top: 15px
+            background: url('../img/gun-bg.png') center top / cover
+            width: 289px
+            height: 289px
+
+        &__info
+            padding: 15px 0px
+            margin-top: 20px
+            width: 290px
+            height: auto
+            background: $accent-orange
+            color: $text-white
+
+        &__title
+            margin-bottom: 10px
+
+@keyframes showImage
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+.showImage
+    animation: showImage ease 2s
+
+.slider-prev
+    background: url('../ico/arrow-left.png') center center / cover
+    width: 50px
+    height: 50px
+
+.slider-next
+    background: url('../ico/arrow-right.png') center center / cover
+    height: 50px
+    width: 50px
+
+.nerf-gun
+
+    &-thumbnail
+        width: 80px
+        height: 80px
+        cursor: pointer
+
+    &-lg
+        width: 280px
+        height: 280px
+
+.guns-catalogue
+    padding: 60px 0px
+
+.section-header
+    width: 360px
+    height: 64px
+    background: $accent-orange
+
+// <!-- guns catalogue finish -->
+
+// <!-- gallery start -->
+.gallery
+    background: $bg-orange
+    padding-top: 60px
+    position: relative
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 120px))
+    padding-bottom: 120px
+
+    &-bg
+        position: absolute
+        background: url('../img/gallery-bg.png') top / cover
+        height: 100%
+        width: 100%
+        top: 0px
+
+.image-gallery
+    padding-top: 36px
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-rows: auto
+    grid-gap: 15px
+    grid-template-areas: 'gallery-img-1 gallery-img-2 gallery-img-3 gallery-img-3' 'gallery-img-1 gallery-img-4 gallery-img-5 gallery-img-6' 'gallery-img-7 gallery-img-7 gallery-img-8 gallery-img-6'
+
+    +screen-down (md)
+        grid-template-areas: 'gallery-img-1 gallery-img-1 gallery-img-2 gallery-img-2' 'gallery-img-1 gallery-img-1 gallery-img-8 gallery-img-8' 'gallery-img-4 gallery-img-4 gallery-img-5 gallery-img-5'  'gallery-img-7 gallery-img-7 gallery-img-7 gallery-img-7' 'gallery-img-3 gallery-img-3 gallery-img-3 gallery-img-3'
+
+.gallery-img-1
+    grid-area: gallery-img-1
+    max-height: 100%
+    width: 100%
+
+    +screen-down (md)
+        height: 100%
+
+.gallery-img-2
+    grid-area: gallery-img-2
+    height: 100%
+    width: 100%
+
+    +screen-down (md)
+        height: auto
+
+.gallery-img-3
+    grid-area: gallery-img-3
+    height: 100%
+    width: 100%
+
+    +screen-down (md)
+        height: auto
+
+.gallery-img-4
+    grid-area: gallery-img-4
+    height: 100%
+    width: 100%
+
+.gallery-img-5
+    grid-area: gallery-img-5
+    width: 100%
+    height: 100%
+
+    +screen-down (md)
+        height: auto
+
+.gallery-img-6
+    grid-area: gallery-img-6
+    height: 100%
+    width: 100%
+
+.gallery-img-7
+    grid-area: gallery-img-7
+    height: auto
+    width: 100%
+
+.gallery-img-8
+    grid-area: gallery-img-8
+    height: auto
+    width: 100%
+// <!-- gallery finish -->
+
+// <!-- price list start -->
+.prices
+    padding: 10px 0
+
+    +screen-down(lg)
+        padding-top: 40px
+
+    &__title
+        margin-bottom: 55px
+        width: 200px
+        height: 56px
+        background: $accent-orange
+
+        +screen-down(lg)
+            width: 100%
+            max-width: 375px
+
+.card
+    color: $text-white
+    width: 100%
+    border: none
+
+    +screen-down(lg)
+        margin-bottom: 40px
+
+    &__info
+        width: 100%
+        height: 400px
+
+        &-one
+            background: url('../img/price-img-1.png') center top / cover
+
+        &-two
+            background: url('../img/price-img-2.png') center top / cover
+
+        &-three
+            background: url('../img/price-img-3.png') center top / cover
+
+    &__title
+        margin-bottom: 37px
+
+    &__desc
+        margin-bottom: 30px
+
+        &-sm
+            max-width: 255px
+            color: $text-grey
+            margin-bottom: 45px
+            text-align: center
+
+    &__price
+        color: $accent-orange
+
+    &__cta
+        width: 100%
+        height: 64px
+        background: $accent-orange
+
+        &:hover
+            background: $hover-accent
+            transition: 0.5s all ease
+
+    &__discount
+        margin-top: 11px
+        position: absolute
+        bottom: 75px
+
+// <!-- price list finish -->
+
+// <!-- contact us start  -->
+
+.polygon-section-up
+    clip-path: polygon(0 0, 100% 120px, 100% 100%, 0% 100%)
+
+    +screen-down(md)
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%)
+
+.contact
+    background: $bg-blue
+    padding: 100px 0 60px
+    position: relative
+    z-index: +1
+
+    &__item
+
+        &-wrapper
+            margin-top: 40px
+
+        &-desc
+            +fs(14px)
+
+    &-bg
+        position: absolute
+        top: 0
+        z-index: -1
+        width: 100%
+        height: 100%
+
+
+.form
+    color: $text-grey
+
+    &-wrapper
+        margin-top: 46px
+
+    &-item
+        height: 60px
+        width: 100%
+        background: $text-white
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25)
+        border-radius: 2px
+        border: 2px solid $text-white
+
+        &-lg
+            height: 120px
+            width: 100%
+            padding-bottom: 75px
+
+    &-btn
+        background: $accent-orange
+        width: 100%
+        max-width: 180px
+        height: 50px
+        border-radius: 4px
+        border: 2px solid $text-white
+        text-transform: uppercase
+        font-weight: bold
+
+        &:active,&:hover,&:focus
+            background: $hover-accent
+            transition: all 0.5s ease
+
+        &__wrapper
+            margin-top: 10px
+
+// <!-- contact us start -->
+
+// <!-- map + footer start -->
+.footer
+    background: $bg-blue
+
+    &__wrap
+        padding: 5px 0 5px 0
+
+        +screen-down(md)
+            padding: 15px 0 15px 0
+
+    &__social
+
+        +screen-down(md)
+            margin-bottom: 15px
+
+    &__text
+        +fs(14px)
+        max-width: 155px
+        color: $text-white
+
+.map
+    height: 500px
+
+.social-media-icons
+    width: 30px
+    height: 30px
+
+// <!-- map + footer finish -->
